@@ -1,0 +1,29 @@
+{
+  "top-gainers-losers": {
+    "page_url": "https://www.nseindia.com/market-data/top-gainers-losers",
+    "requests": [
+      {"url": "https://www.nseindia.com/api/live-analysis-variations?index=gainers", "label": "gainers"},
+      {"url": "https://www.nseindia.com/api/live-analysis-variations?index=loosers", "label": "losers"}
+    ],
+    "required_columns": ["symbol"],
+    "dedupe_columns": ["symbol", "category"]
+  },
+  "upper-band-hitters": {
+    "page_url": "https://www.nseindia.com/market-data/upper-band-hitters",
+    "requests": [{"url": "https://www.nseindia.com/api/live-analysis-variations?index=upper", "label": "upper_band"}],
+    "required_columns": ["symbol"],
+    "dedupe_columns": ["symbol"]
+  },
+  "volume-gainers-spurts": {
+    "page_url": "https://www.nseindia.com/market-data/volume-gainers-spurts",
+    "requests": [{"url": "https://www.nseindia.com/api/live-analysis-variations?index=volume", "label": "volume_gainer"}],
+    "required_columns": ["symbol"],
+    "dedupe_columns": ["symbol"]
+  },
+  "52-week-high-equity-market": {
+    "page_url": "https://www.nseindia.com/market-data/52-week-high-equity-market",
+    "requests": [{"url": "https://www.nseindia.com/api/live-analysis-variations?index=52WeekHigh", "label": "52_week_high"}],
+    "required_columns": ["symbol"],
+    "dedupe_columns": ["symbol"]
+  }
+}

@@ -1,0 +1,18 @@
+http:
+  connect_timeout_seconds: 10
+  read_timeout_seconds: 30
+  min_interval_seconds: 2
+  user_agent: "NSE Market Data Downloader/1.0 (personal educational evaluation)"
+retry:
+  max_attempts: 4
+  base_delay_seconds: 2
+  max_delay_seconds: 60
+output:
+  keep_days: 30
+  keep_versions: 5
+database:
+  enabled: true
+  filename: nse_data.db
+scheduler:
+  cron: "30 16 * * 1-5"
+  timezone: Asia/Kolkata

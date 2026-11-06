@@ -1,0 +1,6 @@
+services:
+  nse-downloader:
+    build: .
+    command: ["--offline", "--output-dir", "/data"]
+    volumes:
+      - ./output:/data

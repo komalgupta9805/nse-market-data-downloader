@@ -1,0 +1,50 @@
+top-gainers-losers:
+  title: Top Gainers and Losers
+  page_url: https://www.nseindia.com/market-data/top-gainers-losers
+  parser: top_gainers_losers
+  requests:
+    - url: https://www.nseindia.com/api/live-analysis-variations?index=gainers
+      label: gainer
+    - url: https://www.nseindia.com/api/live-analysis-variations?index=loosers
+      label: loser
+  required_columns: [symbol]
+  numeric_columns: [ltp, pChange, perChange]
+  natural_key: [symbol, category]
+  sort_by: pChange
+  min_rows: 1
+upper-band-hitters:
+  title: Upper Band Hitters
+  page_url: https://www.nseindia.com/market-data/upper-band-hitters
+  parser: upper_band_hitter
+  requests:
+    - url: https://www.nseindia.com/api/live-analysis-price-band-hitter
+      label: upper_band
+  required_columns: [symbol]
+  numeric_columns: [ltp, pChange, perChange, totalTradedVolume]
+  natural_key: [symbol, series]
+  sort_by: pChange
+  min_rows: 1
+volume-gainers-spurts:
+  title: Volume Gainers and Spurts
+  page_url: https://www.nseindia.com/market-data/volume-gainers-spurts
+  parser: volume_gainer
+  requests:
+    - url: https://www.nseindia.com/api/live-analysis-volume-gainers
+      label: volume_gainer
+  required_columns: [symbol]
+  numeric_columns: [ltp, pChange, perChange, totalTradedVolume, avgVolume]
+  natural_key: [symbol, series]
+  sort_by: perChange
+  min_rows: 1
+52-week-high-equity-market:
+  title: 52 Week High Equity Market
+  page_url: https://www.nseindia.com/market-data/52-week-high-equity-market
+  parser: week_52_high
+  requests:
+    - url: https://www.nseindia.com/api/live-analysis-data-52weekhighstock
+      label: 52_week_high
+  required_columns: [symbol]
+  numeric_columns: [ltp, pChange, perChange, yearHigh]
+  natural_key: [symbol, series]
+  sort_by: pChange
+  min_rows: 1
