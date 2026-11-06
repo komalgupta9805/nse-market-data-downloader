@@ -64,6 +64,3 @@ The compose default is offline for reproducibility; override its command with li
 
 See `docs/ENDPOINTS.md`, `docs/DECISIONS.md`, `docs/ARCHITECTURE.md`, and `docs/PRD_AUDIT.md`. The four delivered CSV samples are verified live NSE snapshots from 2026-11-06 and byte-for-byte match the corresponding runtime files; `sample_output/README.txt` records this provenance. This project fetches current snapshots only, not historical backfill; NSE may alter endpoint contracts or have no qualifying records on a non-trading day.
 
-## Compliance and permitted access
-
-This project is for personal or educational evaluation use with unauthenticated public NSE data. It uses a normal session, page-specific Referer headers, sequential requests, and a minimum two-second request interval. It does not use browser automation, proxies, CAPTCHA solving, credential sharing, fingerprint spoofing, or access-control bypasses. Review [NSE terms of use](https://www.nseindia.com/terms-of-use) before use; any redistribution remains your responsibility.
